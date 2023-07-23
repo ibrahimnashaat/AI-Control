@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "761578432013",
+    "project_id": "noro-14113",
+    "storage_bucket": "noro-14113.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761578432013:android:804ce8ffb8fcbcb9a75744",
+        "android_client_info": {
+          "package_name": "com.example.ai_control"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "761578432013-k0usmibfemcqfrcr5s9p4717flkd0ddg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTRkmpfEtBo-QTQj9L41No4ZbadJ05nw4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "761578432013-k0usmibfemcqfrcr5s9p4717flkd0ddg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
