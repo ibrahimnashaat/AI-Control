@@ -8,10 +8,11 @@ import 'package:ai_control/shared/local/cach_helper/cach_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:sizer/sizer.dart';
+
 
 import '../../modules/drawer_pages/about_us.dart';
 import '../../modules/drawer_pages/contact_us.dart';
+import '../../shared/color.dart';
 import '../login/login.dart';
 
 class Drawers extends StatelessWidget {
@@ -45,13 +46,13 @@ class Drawers extends StatelessWidget {
        child: Column(
         children: [
          Container(
-          height: 36.h,
+          height: 200,
           child: Stack(
            alignment:  AlignmentDirectional.bottomCenter,
            children: [
             Align(
              child: Container(
-              height: 30.h,
+              height: 150,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
@@ -95,14 +96,14 @@ class Drawers extends StatelessWidget {
          ),
 
          SizedBox(
-          height: 6.h,
+          height: 6,
          ),
 
          Row(
           children: [
            Icon(
             Icons.person,
-            color: HexColor('#2888ff'),
+            color: mainColor,
            ),
            TextButton(
             onPressed: (){
@@ -114,7 +115,7 @@ class Drawers extends StatelessWidget {
              "profile".tr(context),
              style: TextStyle(
               fontSize: 20,
-              color: HexColor('#2888ff'),
+              color: mainColor,
 
              ),
             ),
@@ -126,7 +127,7 @@ class Drawers extends StatelessWidget {
           children: [
            Icon(
             Icons.help_outline,
-            color: HexColor('#2888ff'),
+            color: mainColor,
            ),
            TextButton(
             onPressed: (){
@@ -139,7 +140,7 @@ class Drawers extends StatelessWidget {
              "about us".tr(context),
              style: TextStyle(
               fontSize: 20,
-              color: HexColor('#2888ff'),
+              color: mainColor,
 
              ),
             ),
@@ -151,7 +152,7 @@ class Drawers extends StatelessWidget {
           children: [
            Icon(
             Icons.support_agent,
-            color: HexColor('#2888ff'),
+            color: mainColor,
            ),
            TextButton(
             onPressed: (){
@@ -164,7 +165,7 @@ class Drawers extends StatelessWidget {
              "contact us".tr(context),
              style: TextStyle(
               fontSize: 20,
-              color: HexColor('#2888ff'),
+              color: mainColor,
 
              ),
             ),
@@ -179,7 +180,7 @@ class Drawers extends StatelessWidget {
           children: [
            Icon(
             Icons.logout,
-            color: HexColor('#2888ff'),
+            color: mainColor,
            ),
            TextButton(
             onPressed: (){
@@ -196,7 +197,7 @@ class Drawers extends StatelessWidget {
              "logout".tr(context),
              style: TextStyle(
               fontSize: 20,
-              color: HexColor('#2888ff'),
+              color: mainColor,
 
              ),
             ),

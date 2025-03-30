@@ -1,9 +1,10 @@
 import 'package:ai_control/shared/local/cach_helper/cach_helper.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:sizer/sizer.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../../shared/color.dart';
 import '../login/login.dart';
 
 class Swiping {
@@ -56,16 +57,20 @@ class _OnBoardingState extends State<OnBoarding> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        systemOverlayStyle: SystemUiOverlayStyle(
+          statusBarColor: Colors.transparent
+        ),
         actions: [
           SizedBox(
-            width: 24.w,
+            width: 24,
             child: TextButton(
               onPressed: submit,
               child: Text(
                 'SKIP',
                 style: TextStyle(
-                    color: HexColor('#2888ff'),
-                    fontSize: 16.sp,
+                    color: mainColor,
+                    fontSize: 16,
                     fontWeight: FontWeight.w500,
                     letterSpacing: 2),
               ),
@@ -111,16 +116,16 @@ class _OnBoardingState extends State<OnBoarding> {
                     count: swipingScreens.length,
                     effect: ExpandingDotsEffect(
                       dotColor: Colors.black26,
-                      activeDotColor: HexColor('#2888ff'),
-                      dotHeight: 1.6.h,
-                      dotWidth: 3.w,
+                      activeDotColor: mainColor,
+                      dotHeight: 10,
+                      dotWidth: 10,
                       spacing: 5,
                       expansionFactor: 3,
                     ),
                   ),
                   Spacer(),
                   SizedBox(
-                    height: 10.h,
+                    height: 50,
                     child: FloatingActionButton(
                       onPressed: () {
                         if (isLast) {
@@ -133,10 +138,11 @@ class _OnBoardingState extends State<OnBoarding> {
                               curve: Curves.fastLinearToSlowEaseIn);
                         }
                       },
-                      backgroundColor: HexColor('#2888ff'),
+                      backgroundColor: mainColor,
                       child: Icon(
                         Icons.arrow_forward_ios_rounded,
-                        size: 3.h,
+                        size: 26,
+                        color: Colors.white
                       ),
                     ),
                   )
@@ -150,30 +156,32 @@ class _OnBoardingState extends State<OnBoarding> {
   }
 
   Widget onBoarding(Swiping wid) => Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Image.asset(
             '${wid.image}',
+
           ),
           Text(
             '${wid.text1}',
             style: TextStyle(
-                fontSize: 24.sp,
+                fontSize: 30,
                 fontWeight: FontWeight.bold,
                 color: HexColor('#1D2445'),
                 letterSpacing: 2),
           ),
           SizedBox(
-            height: 4.h,
+            height: 10,
           ),
           SizedBox(
-            width: 80.w,
             child: Text(
               '${wid.text2}',
               //      'I have developed meaningful relationships with individuals of all ages, including seven-year-old Hillary. Many of my mentees come from disadvantaged backgrounds',
               textAlign: TextAlign.center,
+
               style: TextStyle(
                 color: Colors.black54,
+                fontSize: 16
               ),
             ),
           ),

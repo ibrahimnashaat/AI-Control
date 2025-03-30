@@ -164,7 +164,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     child: Text(
                       "This is an invisible widget",
-                      style: Theme.of(context).textTheme.headline6,
+                      style: Theme.of(context).textTheme.headlineLarge,
                     ));
 
                 screenshotController

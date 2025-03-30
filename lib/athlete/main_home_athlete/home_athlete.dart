@@ -7,6 +7,7 @@ import 'package:hexcolor/hexcolor.dart';
 import '../../bloc/main_cubit/mian_cubit.dart';
 import '../../bloc/main_home_cubit/cubit.dart';
 import '../../bloc/main_home_cubit/states.dart';
+import '../../shared/color.dart';
 
 class HomeAthlete extends StatefulWidget {
   const HomeAthlete({Key? key}) : super(key: key);
@@ -54,7 +55,7 @@ class _HomeAthleteState extends State<HomeAthlete> {
                           value: items,
                           child: Text(
                             items,
-                            style: TextStyle(color: HexColor('#2888ff')),
+                            style: TextStyle(color: mainColor),
                           ),
                         );
                       }).toList(),

@@ -1,7 +1,8 @@
 import 'package:ai_control/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:sizer/sizer.dart';
+
+import '../../shared/color.dart';
 
 class AboutUs extends StatefulWidget {
   const AboutUs({Key? key}) : super(key: key);
@@ -27,7 +28,7 @@ class _AboutUsState extends State<AboutUs> {
                   borderRadius: BorderRadius.all(
                     Radius.circular(20),
                   ),
-                  color: HexColor('#2888ff'),
+                  color: mainColor,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,15 +36,15 @@ class _AboutUsState extends State<AboutUs> {
                     Container(
                       margin: EdgeInsets.only(left: 20, top: 10),
                       child: Text(
-                        "About Us".tr(context),
-                        style: Theme.of(context).textTheme.headline4,
+                        "about us".tr(context),
+                        style: Theme.of(context).textTheme.headlineLarge,
                       ),
                     ),
                     Container(
                       margin: EdgeInsets.all(20.0),
                       child: Text(
                         "definition".tr(context),
-                        style: TextStyle(color: Colors.white, fontSize: 13.sp),
+                        style: TextStyle(color: Colors.white, fontSize: 13),
                       ),
                     ),
                   ],
@@ -58,7 +59,7 @@ class _AboutUsState extends State<AboutUs> {
                 style: TextStyle(
                   fontSize: 34,
                   fontWeight: FontWeight.bold,
-                  color: HexColor('#2888ff'),
+                  color: mainColor,
                 ),
               )),
               Padding(
@@ -79,20 +80,20 @@ class _AboutUsState extends State<AboutUs> {
                 children: [
                   Column(
                     children: [
-                      CircleAvatar(
+                      const CircleAvatar(
                         backgroundColor: Colors.blue,
                         radius: 56,
                         backgroundImage:
-                            AssetImage('assets/images/Amr_Abdellatife.jpg'),
+                            AssetImage('assets/images/about_us/na.jpg'),
                       ),
                       SizedBox(
                         height: 16,
                       ),
                       Text(
-                        "D\\\\ Amr Abdellatif".tr(context),
+                        "Ibrahim Nashat".tr(context),
                         style: TextStyle(
                           fontSize: 20,
-                          color: HexColor('#2888ff'),
+                          color: mainColor,
                         ),
                       ),
                     ],
@@ -103,7 +104,7 @@ class _AboutUsState extends State<AboutUs> {
                       CircleAvatar(
                         backgroundColor: Colors.blue,
                         radius: 56,
-                        backgroundImage: AssetImage('assets/images/sadat.jpg'),
+                        backgroundImage: AssetImage('assets/images/about_us/sa.jpg'),
                       ),
                       SizedBox(
                         height: 16,
@@ -111,132 +112,7 @@ class _AboutUsState extends State<AboutUs> {
                       Text(
                         "Ibrahim Elsadat".tr(context),
                         style:
-                            TextStyle(color: HexColor('#2888ff'), fontSize: 20),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                children: [
-                  Column(
-                    children: [
-                      CircleAvatar(
-                        backgroundColor: Colors.blue,
-                        radius: 56,
-                        backgroundImage: AssetImage('assets/images/b.jpg'),
-                      ),
-                      SizedBox(
-                        height: 16,
-                      ),
-                      Text(
-                        "Ahmed Mohamed".tr(context),
-                        style:
-                            TextStyle(color: HexColor('#2888ff'), fontSize: 20),
-                      ),
-                    ],
-                  ),
-                  Spacer(),
-                  Column(
-                    children: [
-                      CircleAvatar(
-                        backgroundColor: Colors.blue,
-                        radius: 56,
-                        backgroundImage: AssetImage('assets/images/aaaa.jpg'),
-                      ),
-                      SizedBox(
-                        height: 16,
-                      ),
-                      Text(
-                        "Apanop Fekry".tr(context),
-                        style:
-                            TextStyle(color: HexColor('#2888ff'), fontSize: 20),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                children: [
-                  Column(
-                    children: [
-                      CircleAvatar(
-                        backgroundColor: Colors.blue,
-                        radius: 56,
-                        backgroundImage: AssetImage('assets/images/a.jpg'),
-                      ),
-                      SizedBox(
-                        height: 16,
-                      ),
-                      Text(
-                        "Ibthal Ahmed".tr(context),
-                        style:
-                            TextStyle(color: HexColor('#2888ff'), fontSize: 20),
-                      ),
-                    ],
-                  ),
-                  Spacer(),
-                  Column(
-                    children: [
-                      CircleAvatar(
-                        backgroundColor: Colors.blue,
-                        radius: 56,
-                        
-                     backgroundImage: AssetImage('assets/images/aa.jpg'),
-                      ),
-                      SizedBox(
-                        height: 16,
-                      ),
-                      Text(
-                        "Heba Ahmed".tr(context),
-                        style:
-                            TextStyle(color: HexColor('#2888ff'), fontSize: 20),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-               SizedBox(
-                height: 20
-              ),
-              Row(
-                children: [
-                  Column(
-                    children: [
-                      CircleAvatar(
-                        backgroundColor: Colors.blue,
-                        radius: 56,
-                        backgroundImage: AssetImage('assets/images/aaa.jpg'),
-                      ),
-                      SizedBox(height: 16),
-                      Text(
-                        "Mahmoud Yousif".tr(context),
-                        style:
-                            TextStyle(color: HexColor('#2888ff'), fontSize: 20),
-                      ),
-                    ],
-                  ),
-                  Spacer(),
-                  Column(
-                    children: [
-                      CircleAvatar(
-                        backgroundColor: Colors.blue,
-                        radius: 56,
-                        backgroundImage: AssetImage('assets/images/i.jpg'),
-                      ),
-                      SizedBox(
-                        height: 16,
-                      ),
-                      Text(
-                        "Amal Othman".tr(context),
-                        style:
-                            TextStyle(color: HexColor('#2888ff'), fontSize: 20),
+                            TextStyle(color: mainColor, fontSize: 20),
                       ),
                     ],
                   ),
@@ -253,18 +129,70 @@ class _AboutUsState extends State<AboutUs> {
                       CircleAvatar(
                         backgroundColor: Colors.blue,
                         radius: 56,
-                        backgroundImage:
-                            AssetImage('assets/images/ibrahim.jpg'),
+                        backgroundImage: AssetImage('assets/images/about_us/mo.jpg'),
                       ),
                       SizedBox(
                         height: 16,
                       ),
                       Text(
-                        "Ibrahim Nashat".tr(context),
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: HexColor('#2888ff'),
-                        ),
+                        "Mohamed EL-Werdany".tr(context),
+                        style:
+                            TextStyle(color: mainColor, fontSize: 20),
+                      ),
+                    ],
+                  ),
+
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  Column(
+                    children: [
+                     Container(
+                       width: 115,
+                       height: 115,
+
+                       decoration: BoxDecoration(
+
+                         shape: BoxShape.circle,
+                         color: Colors.cyanAccent
+                       ),
+                       child: ClipOval(
+                         child: Image.asset('assets/images/about_us/has.jpg',
+
+                           fit: BoxFit.contain,
+                         ),
+                       ),
+                     ),
+                      SizedBox(
+                        height: 16,
+                      ),
+                      Text(
+                        "Hasnaa Tarik".tr(context),
+                        style:
+                            TextStyle(color: mainColor, fontSize: 20),
+                      ),
+                    ],
+                  ),
+                  Spacer(),
+                  Column(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.blue,
+                        radius: 56,
+                        
+                     backgroundImage: AssetImage('assets/images/about_us/ra.jpg'),
+                      ),
+                      SizedBox(
+                        height: 16,
+                      ),
+                      Text(
+                        "Rahma Mohamed".tr(context),
+                        style:
+                            TextStyle(color: mainColor, fontSize: 20),
                       ),
                     ],
                   ),
@@ -273,6 +201,7 @@ class _AboutUsState extends State<AboutUs> {
               SizedBox(
                 height: 20,
               ),
+
             ],
           ),
         ),

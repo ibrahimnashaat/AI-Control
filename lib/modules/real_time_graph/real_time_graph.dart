@@ -5,6 +5,8 @@ import 'package:screenshot/screenshot.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'dart:async';
 
+import '../../shared/color.dart';
+
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key? key}) : super(key: key);
 
@@ -42,9 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
-            body: RepaintBoundary(
+    return RepaintBoundary(
       key: repaintKey,
       child: SfCartesianChart(
           series: <LineSeries<LiveData, int>>[
@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 _chartSeriesController = controller;
               },
               dataSource: chartData,
-              color: HexColor('#2888ff'),
+              color: mainColor,
               xValueMapper: (LiveData sales, _) => sales.time,
               yValueMapper: (LiveData sales, _) => sales.speed,
             )
@@ -67,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
               axisLine: const AxisLine(width: 0),
               majorTickLines: const MajorTickLines(size: 0),
               title: AxisTitle(text: 'emg detector (HZ)'))),
-    )));
+    );
   }
 
   int time = 19;

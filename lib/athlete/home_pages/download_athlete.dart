@@ -4,6 +4,7 @@ import 'package:ai_control/models/pdf_model/invoice.dart';
 import 'package:ai_control/models/pdf_model/supplier.dart';
 import 'package:ai_control/modules/pdf_api/pdf_api.dart';
 import 'package:ai_control/modules/pdf_api/pdf_invoice_api.dart';
+import 'package:ai_control/shared/color.dart';
 import 'package:ai_control/shared/local/cach_helper/cach_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -52,8 +53,8 @@ class _DownloadAthleteState extends State<DownloadAthlete> {
                     borderRadius: const BorderRadius.all(
                       Radius.circular(20),
                     ),
-                    color:Colors.red
-                    // HexColor('#2888ff'),
+                    color:mainColor
+                    // mainColor
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -64,7 +65,7 @@ class _DownloadAthleteState extends State<DownloadAthlete> {
                           margin: const EdgeInsets.only(left: 6, top: 10),
                           child: Text(
                             "Athlete Information!".tr(context),
-                            style: Theme.of(context).textTheme.headline4,
+                            style: Theme.of(context).textTheme.headlineLarge,
                           ),
                         ),
                         const SizedBox(
@@ -76,7 +77,7 @@ class _DownloadAthleteState extends State<DownloadAthlete> {
                           child: Text(
                             "please connect the EMG device before you click on the start button!"
                                 .tr(context),
-                            style: Theme.of(context).textTheme.bodyText1!.copyWith(color: Colors.white),
+                            style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: Colors.white),
                           ),
                         ),
                       ],
@@ -96,7 +97,7 @@ class _DownloadAthleteState extends State<DownloadAthlete> {
                           children: [
                             Text(
                               "Patient Name : ".tr(context),
-                              style: Theme.of(context).textTheme.bodyText1,
+                              style: Theme.of(context).textTheme.bodyLarge,
                             ),
                             Expanded(
                               child: Text(
@@ -112,7 +113,7 @@ class _DownloadAthleteState extends State<DownloadAthlete> {
                           children: [
                             Text(
                               "Patient age : ".tr(context),
-                              style: Theme.of(context).textTheme.bodyText1,
+                              style: Theme.of(context).textTheme.bodyLarge,
                             ),
                             Text(
                               model?.age ?? "loading..".tr(context),
@@ -126,7 +127,7 @@ class _DownloadAthleteState extends State<DownloadAthlete> {
                           children: [
                             Text(
                               "Patient gender : ".tr(context),
-                              style: Theme.of(context).textTheme.bodyText1,
+                              style: Theme.of(context).textTheme.bodyLarge,
                             ),
                             Text(
                               model?.type ?? "loading..".tr(context),
@@ -140,7 +141,7 @@ class _DownloadAthleteState extends State<DownloadAthlete> {
                           children: [
                             Text(
                               "User Type : ".tr(context),
-                              style: Theme.of(context).textTheme.bodyText1,
+                              style: Theme.of(context).textTheme.bodyLarge,
                             ),
                             Text(
                               model?.typeMember ?? "loading..".tr(context),
@@ -153,7 +154,7 @@ class _DownloadAthleteState extends State<DownloadAthlete> {
                         child: Row(
                           children: [
                             Text("Patient phone number : ".tr(context),
-                                style: Theme.of(context).textTheme.bodyText1),
+                                style: Theme.of(context).textTheme.bodyLarge),
                             Expanded(
                               child: Text(
                                 model?.phone ?? 'loading..'.tr(context),
@@ -168,7 +169,7 @@ class _DownloadAthleteState extends State<DownloadAthlete> {
                           children: [
                             Text(
                               "Patient location : ".tr(context),
-                              style: Theme.of(context).textTheme.bodyText1,
+                              style: Theme.of(context).textTheme.bodyLarge,
                             ),
                             Expanded(
                               child: Text(
@@ -186,7 +187,7 @@ class _DownloadAthleteState extends State<DownloadAthlete> {
                           children: [
                             Text(
                               "Patient state : ".tr(context),
-                              style: Theme.of(context).textTheme.bodyText1,
+                              style: Theme.of(context).textTheme.bodyLarge,
                             ),
                             Text(
                               name?.tr(context) ??
@@ -268,7 +269,7 @@ class _DownloadAthleteState extends State<DownloadAthlete> {
 
                         PdfApi.openFile(pdfFile);
                       },
-                      color:Colors.red,
+                      color:mainColor,
                       textColor: Theme.of(context).scaffoldBackgroundColor,
                       child: Row(
                         children: [
@@ -280,7 +281,7 @@ class _DownloadAthleteState extends State<DownloadAthlete> {
                           ),
                           Text(
                             "Download".tr(context),
-                            style: Theme.of(context).textTheme.headline4,
+                            style: Theme.of(context).textTheme.headlineLarge,
                           )
                         ],
                       ),

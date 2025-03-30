@@ -3,7 +3,6 @@ import 'package:ai_control/bloc/main_cubit/main_states.dart';
 import 'package:ai_control/bloc/main_cubit/mian_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sizer/sizer.dart';
 
 class UserProfile extends StatefulWidget {
   const UserProfile({Key? key}) : super(key: key);
@@ -73,10 +72,10 @@ class _UserProfileState extends State<UserProfile> {
                     "Update".tr(context),
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 20.sp,
+                      fontSize: 20,
                     ),
                   ),
-                  width:22.w,
+                  width:22,
                 ),
 
               )
@@ -89,7 +88,7 @@ class _UserProfileState extends State<UserProfile> {
               child: Column(
                 children: [
                   Container(
-                    height: 36.h,
+                    height: 36,
                     child: Stack(
                       alignment: AlignmentDirectional.bottomCenter,
                       children: [
@@ -98,7 +97,7 @@ class _UserProfileState extends State<UserProfile> {
                             alignment: AlignmentDirectional.topEnd,
                             children: [
                               Container(
-                                height: 30.h,
+                                height: 30,
 
                                 width: MediaQuery.of(context).size.width,
                                 decoration: BoxDecoration(
@@ -166,19 +165,19 @@ class _UserProfileState extends State<UserProfile> {
                   ),
 
                   SizedBox(
-                    height: 2.h,
+                    height: 2,
                   ),
 
                   Text(
                     '${model?.name??'loading..'}',
-                    style: Theme.of(context).textTheme.bodyText1,
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                   Text(
                     '${model?.bio??'loading..'}',
-                    style: Theme.of(context).textTheme.bodyText1,
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                   SizedBox(
-                    height: 6.h,
+                    height: 6,
                   ),
                   if (SocialCubit.get(context).CoverImage != null || SocialCubit.get(context).ProfileImage != null )
                     Row(
@@ -204,7 +203,7 @@ class _UserProfileState extends State<UserProfile> {
                                     },
                                     child: Text(
                                       "Update Cover".tr(context),
-                                      style: Theme.of(context).textTheme.bodyText1,
+                                      style: Theme.of(context).textTheme.bodyLarge,
                                     ),
                                     style: OutlinedButton.styleFrom(
 
@@ -214,7 +213,7 @@ class _UserProfileState extends State<UserProfile> {
                                 ),
                                 if(state is SocialUserUpdateLoadingStates)
                                   SizedBox(
-                                    height: 1.h,
+                                    height: 1,
                                   ),
                                 if(state is SocialUserUpdateLoadingStates)
                                   LinearProgressIndicator(),
@@ -225,7 +224,7 @@ class _UserProfileState extends State<UserProfile> {
 
 
                         SizedBox(
-                          width: 2.w,
+                          width: 2,
                         ),
                         if(SocialCubit.get(context).ProfileImage != null)
 
@@ -246,7 +245,7 @@ class _UserProfileState extends State<UserProfile> {
                                   },
                                   child: Text(
                                     "Update Image".tr(context),
-                                    style: Theme.of(context).textTheme.bodyText1,
+                                    style: Theme.of(context).textTheme.bodyLarge,
                                   ),
                                   style: OutlinedButton.styleFrom(
                                     minimumSize: Size(100, 50),
@@ -255,7 +254,7 @@ class _UserProfileState extends State<UserProfile> {
                                 ),
                                 if(state is SocialUserUpdateLoadingStates)
                                   SizedBox(
-                                    height: 1.h,
+                                    height: 1,
                                   ),
                                 if(state is SocialUserUpdateLoadingStates)
                                   LinearProgressIndicator(),
@@ -268,7 +267,7 @@ class _UserProfileState extends State<UserProfile> {
                     ),
                   if (SocialCubit.get(context).CoverImage != null || SocialCubit.get(context).ProfileImage != null )
                     SizedBox(
-                      height: 6.h,
+                      height: 20,
                     ),
                   TextFormField(
                     controller: nameController,
@@ -285,7 +284,7 @@ class _UserProfileState extends State<UserProfile> {
                       ),
                       label: Text(
                         "User Name".tr(context),
-                        style: Theme.of(context).textTheme.bodyText1,),
+                        style: Theme.of(context).textTheme.bodyLarge,),
                       prefixIcon: Icon(
 
                         Icons.person,
@@ -293,7 +292,7 @@ class _UserProfileState extends State<UserProfile> {
                     ),
                   ),
                   SizedBox(
-                    height: 4.h,
+                    height: 20,
                   ),
                   TextFormField(
                     controller: bioController,
@@ -310,14 +309,14 @@ class _UserProfileState extends State<UserProfile> {
                       ),
                       label: Text(
                         "BIO".tr(context),
-                        style: Theme.of(context).textTheme.bodyText1,),
+                        style: Theme.of(context).textTheme.bodyLarge,),
                       prefixIcon: Icon(
                         Icons.info_outline,
                       ),
                     ),
                   ),
                   SizedBox(
-                    height: 4.h,
+                    height: 20,
                   ),
                   TextFormField(
                     controller: phoneController,
@@ -334,14 +333,14 @@ class _UserProfileState extends State<UserProfile> {
                       ),
                       label: Text(
                         "phone".tr(context),
-                        style: Theme.of(context).textTheme.bodyText1,),
+                        style: Theme.of(context).textTheme.bodyLarge,),
                       prefixIcon: Icon(
                         Icons.phone,
                       ),
                     ),
                   ),
                   SizedBox(
-                    height: 4.h,
+                    height: 20,
                   ),
                   TextFormField(
                     controller: emailController,
@@ -358,14 +357,14 @@ class _UserProfileState extends State<UserProfile> {
                       ),
                       label: Text(
                         "e-mail".tr(context),
-                        style: Theme.of(context).textTheme.bodyText1,),
+                        style: Theme.of(context).textTheme.bodyLarge,),
                       prefixIcon: Icon(
                         Icons.email_outlined,
                       ),
                     ),
                   ),
                   SizedBox(
-                    height: 10.h,
+                    height: 10,
                   ),
                 ],
               ),

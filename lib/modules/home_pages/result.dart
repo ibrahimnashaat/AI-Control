@@ -6,8 +6,8 @@ import 'package:flutter_tflite/flutter_tflite.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 import 'package:image_picker/image_picker.dart';
-import 'package:sizer/sizer.dart';
 
+import '../../shared/color.dart';
 import '../../shared/local/cach_helper/cach_helper.dart';
 
 class result extends StatefulWidget {
@@ -110,7 +110,7 @@ class _resultState extends State<result> {
                   )
                 : Container(),
             SizedBox(
-              height: 4.h,
+              height: 4,
             ),
             //  isImageLoaded ? Text("Name : $name \n Confidence ") : Container(),
 
@@ -119,10 +119,10 @@ class _resultState extends State<result> {
                     alignment: AlignmentDirectional.center,
                     children: [
                       Container(
-                        width: 30.h,
-                        height: 30.h,
+                        width: 200,
+                        height: 200,
                         decoration: BoxDecoration(
-                          color: HexColor('#2888ff').withOpacity(0.5),
+                          color:mainColor.withOpacity(0.5),
                           borderRadius: BorderRadius.circular(20),
                         ),
                       ),
@@ -132,12 +132,12 @@ class _resultState extends State<result> {
                             value: value1,
                           ),
                           SizedBox(
-                            height: 1.h,
+                            height: 1,
                           ),
                           Text(
                             name,
                             style: TextStyle(
-                                fontSize: 22.0.sp,
+                                fontSize: 22.0,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
                           ),

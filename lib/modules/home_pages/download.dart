@@ -15,6 +15,8 @@ import 'package:firebase_database/firebase_database.dart';
 import 'dart:async';
 import 'package:audioplayers/audioplayers.dart';
 
+import '../../shared/color.dart';
+
 class Download extends StatefulWidget {
   const Download({Key? key}) : super(key: key);
 
@@ -78,7 +80,7 @@ class _DownloadState extends State<Download> {
                     borderRadius: const BorderRadius.all(
                       Radius.circular(20),
                     ),
-                    color: HexColor('#2888ff'),
+                    color: mainColor,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -89,7 +91,7 @@ class _DownloadState extends State<Download> {
                           margin: const EdgeInsets.only(left: 6, top: 10),
                           child: Text(
                             "Patient Information!".tr(context),
-                            style: Theme.of(context).textTheme.headline4,
+                            style: Theme.of(context).textTheme.headlineLarge,
                           ),
                         ),
                         const SizedBox(
@@ -101,7 +103,7 @@ class _DownloadState extends State<Download> {
                           child: Text(
                             "please connect the EMG device before you click on the start button!"
                                 .tr(context),
-                            style: Theme.of(context).textTheme.bodyText1!.copyWith(color: Colors.white),
+                            style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: Colors.white),
                           ),
                         ),
                       ],
@@ -121,7 +123,7 @@ class _DownloadState extends State<Download> {
                           children: [
                             Text(
                               "Patient Name : ".tr(context),
-                              style: Theme.of(context).textTheme.bodyText1,
+                              style: Theme.of(context).textTheme.bodyLarge,
                             ),
                             Expanded(
                               child: Text(
@@ -137,7 +139,7 @@ class _DownloadState extends State<Download> {
                           children: [
                             Text(
                               "Patient age : ".tr(context),
-                              style: Theme.of(context).textTheme.bodyText1,
+                              style: Theme.of(context).textTheme.bodyLarge,
                             ),
                             Text(
                               model?.age ?? "loading..".tr(context),
@@ -151,7 +153,7 @@ class _DownloadState extends State<Download> {
                           children: [
                             Text(
                               "Patient gender : ".tr(context),
-                              style: Theme.of(context).textTheme.bodyText1,
+                              style: Theme.of(context).textTheme.bodyLarge,
                             ),
                             Text(
                               model?.type ?? "loading..".tr(context),
@@ -165,7 +167,7 @@ class _DownloadState extends State<Download> {
                           children: [
                             Text(
                               "User Type : ".tr(context),
-                              style: Theme.of(context).textTheme.bodyText1,
+                              style: Theme.of(context).textTheme.bodyLarge,
                             ),
                             Text(
                               model?.typeMember ?? "loading..".tr(context),
@@ -178,7 +180,7 @@ class _DownloadState extends State<Download> {
                         child: Row(
                           children: [
                             Text("Patient phone number : ".tr(context),
-                                style: Theme.of(context).textTheme.bodyText1),
+                                style: Theme.of(context).textTheme.bodyLarge),
                             Expanded(
                               child: Text(
                                 model?.phone ?? 'loading..'.tr(context),
@@ -193,7 +195,7 @@ class _DownloadState extends State<Download> {
                           children: [
                             Text(
                               "Patient location : ".tr(context),
-                              style: Theme.of(context).textTheme.bodyText1,
+                              style: Theme.of(context).textTheme.bodyLarge,
                             ),
                             Expanded(
                               child: Text(
@@ -211,7 +213,7 @@ class _DownloadState extends State<Download> {
                           children: [
                             Text(
                               "Epilepsy degree : ".tr(context),
-                              style: Theme.of(context).textTheme.bodyText1,
+                              style: Theme.of(context).textTheme.bodyLarge,
                             ),
                             Expanded(
                               child: Text(
@@ -229,7 +231,7 @@ class _DownloadState extends State<Download> {
                           children: [
                             Text(
                               "Patient state : ".tr(context),
-                              style: Theme.of(context).textTheme.bodyText1,
+                              style: Theme.of(context).textTheme.bodyLarge,
                             ),
                             Text(
                               name?.tr(context) ??
@@ -311,7 +313,7 @@ class _DownloadState extends State<Download> {
 
                         PdfApi.openFile(pdfFile);
                       },
-                      color: HexColor('#2888ff'),
+                      color: mainColor,
                       textColor: Theme.of(context).scaffoldBackgroundColor,
                       child: Row(
                         children: [
@@ -323,7 +325,7 @@ class _DownloadState extends State<Download> {
                           ),
                           Text(
                             "Download".tr(context),
-                            style: Theme.of(context).textTheme.headline4,
+                            style: Theme.of(context).textTheme.headlineLarge,
                           )
                         ],
                       ),

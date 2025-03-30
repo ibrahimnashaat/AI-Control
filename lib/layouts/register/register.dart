@@ -6,11 +6,11 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:sizer/sizer.dart';
 
 import '../../bloc/main_cubit/mian_cubit.dart';
 import '../../bloc/register_cubit/cubit.dart';
 import '../../bloc/register_cubit/states.dart';
+import '../../shared/color.dart';
 import '../login/login.dart';
 import '../main_home/home.dart';
 
@@ -87,7 +87,7 @@ class _RegisterState extends State<Register> {
                         ),
                         CircleAvatar(
                           radius: 80,
-                          backgroundColor: HexColor('#2888ff'),
+                          backgroundColor: mainColor,
                           backgroundImage: AssetImage(
                             'assets/images/3s.png',
                           ),
@@ -108,7 +108,7 @@ class _RegisterState extends State<Register> {
                               borderRadius: BorderRadius.circular(20),
                             ),
                             label: Text("Enter name".tr(context),
-                                style: Theme.of(context).textTheme.bodyText1),
+                                style: Theme.of(context).textTheme.bodyLarge),
                             prefixIcon: Icon(
                               Icons.person,
                             ),
@@ -130,7 +130,7 @@ class _RegisterState extends State<Register> {
                               borderRadius: BorderRadius.circular(20),
                             ),
                             label: Text("Enter e-mail".tr(context),
-                                style: Theme.of(context).textTheme.bodyText1),
+                                style: Theme.of(context).textTheme.bodyLarge),
                             prefixIcon: Icon(
                               Icons.mail,
                             ),
@@ -152,7 +152,7 @@ class _RegisterState extends State<Register> {
                               borderRadius: BorderRadius.circular(20),
                             ),
                             label: Text("Enter age".tr(context),
-                                style: Theme.of(context).textTheme.bodyText1),
+                                style: Theme.of(context).textTheme.bodyLarge),
                             prefixIcon: Icon(
                               Icons.numbers,
                             ),
@@ -174,7 +174,7 @@ class _RegisterState extends State<Register> {
                               borderRadius: BorderRadius.circular(20),
                             ),
                             label: Text("Enter address".tr(context),
-                                style: Theme.of(context).textTheme.bodyText1),
+                                style: Theme.of(context).textTheme.bodyLarge),
                             prefixIcon: Icon(
                               Icons.place,
                             ),
@@ -196,7 +196,7 @@ class _RegisterState extends State<Register> {
                               borderRadius: BorderRadius.circular(20),
                             ),
                             label: Text("Enter Number".tr(context),
-                                style: Theme.of(context).textTheme.bodyText1),
+                                style: Theme.of(context).textTheme.bodyLarge),
                             prefixIcon: Icon(
                               Icons.phone,
                             ),
@@ -219,7 +219,7 @@ class _RegisterState extends State<Register> {
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               label: Text("passowrd".tr(context),
-                                  style: Theme.of(context).textTheme.bodyText1),
+                                  style: Theme.of(context).textTheme.bodyLarge),
                               prefixIcon: Icon(
                                 Icons.lock,
                               ),
@@ -240,7 +240,7 @@ class _RegisterState extends State<Register> {
                             Text(
                               'Please Select Your Gender :',
                               style: TextStyle(
-                                  fontSize: 19.sp,
+                                  fontSize: 19,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.lightBlue),
                             ),
@@ -252,7 +252,7 @@ class _RegisterState extends State<Register> {
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
                                       color: type == 'Male'
-                                          ? HexColor('#2888ff')
+                                          ? mainColor
                                           : Colors.grey,
                                     ),
                                     child: MaterialButton(
@@ -274,14 +274,14 @@ class _RegisterState extends State<Register> {
                                   ),
                                 ),
                                 SizedBox(
-                                  width: 6.h,
+                                  width: 6,
                                 ),
                                 Expanded(
                                   child: Container(
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
                                       color: type == 'Female'
-                                          ? HexColor('#2888ff')
+                                          ? mainColor
                                           : Colors.grey,
                                     ),
                                     child: MaterialButton(
@@ -308,7 +308,7 @@ class _RegisterState extends State<Register> {
                             Text(
                               'Please Select Your User Type :',
                               style: TextStyle(
-                                  fontSize: 19.sp,
+                                  fontSize: 19,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.lightBlue),
                             ),
@@ -322,7 +322,7 @@ class _RegisterState extends State<Register> {
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
                                       color: typeMember == 'Athlete'
-                                          ? HexColor('#2888ff')
+                                          ? mainColor
                                           : Colors.grey,
                                     ),
                                     child: MaterialButton(
@@ -346,14 +346,14 @@ class _RegisterState extends State<Register> {
                                   ),
                                 ),
                                 SizedBox(
-                                  width: 6.h,
+                                  width: 6,
                                 ),
                                 Expanded(
                                   child: Container(
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(10),
                                       color: typeMember == 'Patient'
-                                          ? HexColor('#2888ff')
+                                          ? mainColor
                                           : Colors.grey,
                                     ),
                                     child: MaterialButton(
@@ -411,13 +411,13 @@ class _RegisterState extends State<Register> {
                                         );
                                       }
                                     },
-                                    color: HexColor('#2888ff'),
+                                    color: mainColor,
                                     textColor: Theme.of(context)
                                         .scaffoldBackgroundColor,
                                     child: Text("REGISTER".tr(context),
                                         style: Theme.of(context)
                                             .textTheme
-                                            .headline4),
+                                            .headlineLarge),
                                   ),
                                 ),
                                 fallback: (BuildContext context) =>
@@ -430,7 +430,7 @@ class _RegisterState extends State<Register> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text("have an account?".tr(context),
-                                style: Theme.of(context).textTheme.bodyText1),
+                                style: Theme.of(context).textTheme.bodyLarge),
                             TextButton(
                               onPressed: () {
                                 Navigator.pushAndRemoveUntil(

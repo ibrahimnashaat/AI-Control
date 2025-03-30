@@ -7,12 +7,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:sizer/sizer.dart';
 
 import '../../bloc/login_cubit/cubit.dart';
 import '../../bloc/login_cubit/states.dart';
 import '../../bloc/main_cubit/mian_cubit.dart';
 import '../../models/class_user_model.dart';
+import '../../shared/color.dart';
 import '../../shared/components/components.dart';
 import '../main_home/home.dart';
 import '../register/register.dart';
@@ -100,7 +100,7 @@ class Login extends StatelessWidget {
                         ),
                         CircleAvatar(
                           radius: 80,
-                          backgroundColor: HexColor('#2888ff'),
+                          backgroundColor: mainColor,
                           backgroundImage: AssetImage(
                             'assets/images/3s.png',
                           ),
@@ -180,7 +180,7 @@ class Login extends StatelessWidget {
                                   );
                                 }
                               },
-                              color: HexColor('#2888ff'),
+                              color: mainColor,
                               textColor:
                                   Theme.of(context).scaffoldBackgroundColor,
                               child: Text("LOGIN".tr(context),
